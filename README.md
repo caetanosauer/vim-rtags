@@ -9,8 +9,6 @@ Setup
 -----
 [Vundle](https://github.com/gmarik/vundle) can be used to install and update this plugin.
 
-vim-rtags requires that Vim was compiled with `+byte_offset` enabled.
-
 The rtags bin directory needs to be in your PATH.
 
 
