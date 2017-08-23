@@ -20,6 +20,10 @@ Note: `<localleader>` is backslash, unless overridden by `maplocalleader`.
 
 <table>
 <tr>
+<td>&lt;F1&gt;</td>
+<td>find definition/declarations of the symbol under the cursor.</td>
+</tr>
+<tr>
 <td>&lt;localleader&gt;r</td>
 <td>find references to the symbol under the cursor.
 </tr>
