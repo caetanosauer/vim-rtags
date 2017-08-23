@@ -23,11 +23,11 @@ Usage
 </tr>
 <tr>
 <td>&lt;F2&gt;</td>
-<td>find references to the symbol under the cursor.
+<td>find references to the symbol under the cursor.</td>
 </tr>
 <tr>
 <td>:RtagsFind <em>symbol</em></td>
-<td>find definition/declarations of <em>symbol</em>
+<td>find definition/declarations of <em>symbol</em></td>
 </tr>
 <tr>
 <td>:RtagsRegexFind <em>pattern</em></td>
