@@ -7,7 +7,7 @@ command! -nargs=1 RtagsFind call <SID>Rtags_query('--find-symbols '.<f-args>)
 
 function! s:Rtags_query(arguments)
     let location_list = []
-    let rc_output = system('rc --line-numbers '.a:arguments)
+    let rc_output = system('rc --absolute-path '.a:arguments)
     if ! v:shell_error
         for ref in split(rc_output, '\n')
             let ANY='.\{-}'
