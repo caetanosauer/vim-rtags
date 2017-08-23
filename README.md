@@ -17,11 +17,11 @@ Usage
 <table>
 <tr>
 <td>:RtagsFollowSymbolUnderCursor</td>
-<td>find definition/declarations of the symbol under the cursor.</td>
+<td>find definition/declarations of the symbol under the cursor</td>
 </tr>
 <tr>
 <td>:RtagsFindRefsToSymbolUnderCursor</td>
-<td>find references to the symbol under the cursor.</td>
+<td>find references to the symbol under the cursor</td>
 </tr>
 <tr>
 <td>:RtagsFind <em>symbol</em></td>
