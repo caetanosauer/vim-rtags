@@ -3,6 +3,7 @@ function! Rtags_references_to_symbol_under_cursor()
 endfunction
 
 command! -nargs=1 RtagsFind call <SID>Rtags_query('--match-icase --find-symbols '.<f-args>)
+command! -nargs=1 RtagsRegexFind call <SID>Rtags_query('--match-icase --match-regexp --find-symbols '.<f-args>)
 
 
 function! s:Rtags_query(arguments)

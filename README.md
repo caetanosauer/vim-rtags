@@ -27,6 +27,10 @@ Note: `<localleader>` is backslash, unless overridden by `maplocalleader`.
 <td>:RtagsFind <em>symbol</em></td>
 <td>find definition/declarations of <em>symbol</em>
 </tr>
+<tr>
+<td>:RtagsRegexFind <em>pattern</em></td>
+<td>find definitions/declarations of symbols matching <em>pattern</em></td>
+</tr>
 </table>
 
 See `./ftplugin/c.vim` to define custom mappings.
