@@ -11,7 +11,7 @@ endif
 
 
 if !hasmapto('call Rtags_references_to_symbol_under_cursor()')
-    nnoremap <buffer> <silent> <unique> <localleader>r :call Rtags_references_to_symbol_under_cursor()<CR>
+    nnoremap <buffer> <silent> <unique> <F2> :call Rtags_references_to_symbol_under_cursor()<CR>
 endif
 
 
