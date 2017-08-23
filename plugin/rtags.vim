@@ -1,5 +1,5 @@
 function! Rtags_references_to_symbol_under_cursor()
-    call s:Rtags_query('--references '.bufname('%').','.s:Cursor_byte_offset_from_start_of_file())
+    call s:Rtags_query('--references '.bufname('%').':'.line(".").':'.col("."))
 endfunction
 
 command! -nargs=1 RtagsFind call <SID>Rtags_query('--find-symbols '.<f-args>)
@@ -25,10 +25,6 @@ function! s:Rtags_query(arguments)
 
     call setloclist(0, location_list)
     lwindow
-endfunction
-
-function! s:Cursor_byte_offset_from_start_of_file()
-    return (line2byte(line("."))-1) + (col(".")-1)
 endfunction
 
 function! s:Echo_error(msg)
