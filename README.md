@@ -16,11 +16,11 @@ Usage
 -----
 <table>
 <tr>
-<td>&lt;F1&gt;</td>
+<td>:RtagsFollowSymbolUnderCursor</td>
 <td>find definition/declarations of the symbol under the cursor.</td>
 </tr>
 <tr>
-<td>&lt;F2&gt;</td>
+<td>:RtagsFindRefsToSymbolUnderCursor</td>
 <td>find references to the symbol under the cursor.</td>
 </tr>
 <tr>
@@ -33,7 +33,12 @@ Usage
 </tr>
 </table>
 
-See `./ftplugin/c.vim` to define custom mappings.
+Suggested keymaps
+-----
+```vim
+nnoremap <silent> <F1> :RtagsFollowSymbolUnderCursor<CR>
+nnoremap <silent> <F2> :RtagsFindRefsToSymbolUnderCursor<CR>
+```
 
 The [Vim-unimpared](https://github.com/tpope/vim-unimpaired) plugin can help with navigating the output of vim-rtags. It maps:
 * `[l, ]l` to move up/down a line in the "location list" window

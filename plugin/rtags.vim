@@ -1,10 +1,5 @@
-function! Rtags_references_to_symbol_under_cursor()
-    call s:Rtags_query('--references '.bufname('%').':'.line(".").':'.col("."))
-endfunction
-
-function! Rtags_follow_symbol_under_cursor()
-    call s:Rtags_query('--follow-location '.bufname('%').':'.line(".").':'.col("."))
-endfunction
+command! RtagsFollowSymbolUnderCursor call <SID>Rtags_query('--follow-location '.bufname('%').':'.line(".").':'.col("."))
+command! RtagsFindRefsToSymbolUnderCursor call <SID>Rtags_query('--references '.bufname('%').':'.line(".").':'.col("."))
 
 command! -nargs=1 RtagsFind call <SID>Rtags_query('--match-icase --find-symbols '.<f-args>)
 command! -nargs=1 RtagsRegexFind call <SID>Rtags_query('--match-icase --match-regexp --find-symbols '.<f-args>)
