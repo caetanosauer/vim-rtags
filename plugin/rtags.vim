@@ -2,7 +2,7 @@ function! Rtags_references_to_symbol_under_cursor()
     call s:Rtags_query('--references '.bufname('%').':'.line(".").':'.col("."))
 endfunction
 
-command! -nargs=1 RtagsFind call <SID>Rtags_query('--find-symbols '.<f-args>)
+command! -nargs=1 RtagsFind call <SID>Rtags_query('--match-icase --find-symbols '.<f-args>)
 
 
 function! s:Rtags_query(arguments)
