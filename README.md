@@ -7,7 +7,21 @@ rtags uses clang to find symbol references, definitions, etc.
 
 Setup
 -----
-[Vundle](https://github.com/gmarik/vundle) can be used to install and update this plugin.
+[vim-plug](https://github.com/junegunn/vim-plug):
+```vim
+Plug 'yakubin/vim-rtags'
+```
+
+[pathogen.vim](https://github.com/tpope/vim-pathogen):
+```sh
+cd ~/.vim/bundle && \
+git clone https://github.com/yakubin/vim-rtags
+```
+
+[Vundle](https://github.com/VundleVim/Vundle.vim):
+```vim
+Plugin 'yakubin/vim-rtags'
+```
 
 The rtags bin directory needs to be in your PATH.
 
