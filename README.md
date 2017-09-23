@@ -38,6 +38,10 @@ Usage
 <td>find references to the symbol under the cursor</td>
 </tr>
 <tr>
+<td>:RtagsGetTypeOfSymbolUnderCursor</td>
+<td>print the type of symbol under the cursor in the status line</td>
+</tr>
+<tr>
 <td>:RtagsFind <em>symbol</em></td>
 <td>find definition/declarations of <em>symbol</em></td>
 </tr>
@@ -52,6 +56,7 @@ Suggested keymaps
 ```vim
 nnoremap <silent> <F1> :RtagsFollowSymbolUnderCursor<CR>
 nnoremap <silent> <F2> :RtagsFindRefsToSymbolUnderCursor<CR>
+nnoremap <silent> t :RtagsGetTypeOfSymbolUnderCursor<CR>
 ```
 
 The [Vim-unimpared](https://github.com/tpope/vim-unimpaired) plugin can help with navigating the output of vim-rtags. It maps:
