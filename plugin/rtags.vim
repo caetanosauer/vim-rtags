@@ -23,6 +23,7 @@ function! s:Rtags_query(arguments)
         call s:Echo_error("Failed with error code ".v:shell_error.". ".rc_output)
     endif
 
+    lclose
     call setloclist(0, location_list)
     lwindow
 endfunction
