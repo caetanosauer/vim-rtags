@@ -1,5 +1,5 @@
-command! RtagsFollowSymbolUnderCursor call <SID>Rtags_query('--follow-location '.bufname('%').':'.line(".").':'.col("."))
-command! RtagsFindRefsToSymbolUnderCursor call <SID>Rtags_query('--references '.bufname('%').':'.line(".").':'.col("."))
+command! RtagsFollowSymbolUnderCursor call <SID>Rtags_query('--follow-location '.s:Rtags_get_current_location())
+command! RtagsFindRefsToSymbolUnderCursor call <SID>Rtags_query('--references '.s:Rtags_get_current_location())
 
 command! -nargs=1 RtagsFind call <SID>Rtags_query('--match-icase --find-symbols '.<f-args>)
 command! -nargs=1 RtagsRegexFind call <SID>Rtags_query('--match-icase --match-regexp --find-symbols '.<f-args>)
@@ -26,6 +26,10 @@ function! s:Rtags_query(arguments)
     lclose
     call setloclist(0, location_list)
     lwindow
+endfunction
+
+function! s:Rtags_get_current_location()
+    return bufname('%').':'.line('.').':'.col('.')
 endfunction
 
 function! s:Echo_error(msg)
